@@ -38,3 +38,8 @@ Route::get('/doctrine', 'PolisaController@getIndex');
 
 Route::get('/test', 'PolisaController@test');
 Route::get('/generate/tagesmeldung', 'TagesmeldungController@createTagesmeldung')->name('generateTagesmeldung');
+
+Route::get('/dagara', function (){
+   $polisa = \App\Polisa::where('pol_brpol','1345628')->first();
+   dd($polisa->pol_brpol);
+});
